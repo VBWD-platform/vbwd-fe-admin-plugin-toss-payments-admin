@@ -1,0 +1,26 @@
+{
+  "tossAdmin": {
+    "payments": {
+      "title": "Toss Payments",
+      "loading": "Loading…",
+      "empty": "No Toss payments yet.",
+      "orderId": "Order",
+      "amount": "Amount",
+      "method": "Method",
+      "status": "Status",
+      "paymentKey": "Payment key",
+      "refund": "Refund"
+    },
+    "receipts": {
+      "title": "Cash receipts (현금영수증)",
+      "loading": "Loading…",
+      "empty": "No cash receipts issued yet.",
+      "receiptId": "Receipt ID",
+      "paymentKey": "Payment key",
+      "type": "Type",
+      "identifierType": "Identifier",
+      "status": "Status",
+      "issuedAt": "Issued"
+    }
+  }
+}
