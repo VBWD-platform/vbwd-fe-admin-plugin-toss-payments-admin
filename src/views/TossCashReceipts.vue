@@ -1,8 +1,13 @@
 <template>
   <div class="toss-receipts">
     <header><h2>{{ $t('tossAdmin.receipts.title') }}</h2></header>
-    <div v-if="loading">{{ $t('tossAdmin.receipts.loading') }}</div>
-    <table v-else-if="receipts.length > 0" class="txtable">
+    <div v-if="loading">
+      {{ $t('tossAdmin.receipts.loading') }}
+    </div>
+    <table
+      v-else-if="receipts.length > 0"
+      class="txtable"
+    >
       <thead>
         <tr>
           <th>{{ $t('tossAdmin.receipts.receiptId') }}</th>
@@ -14,7 +19,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="r in receipts" :key="r.id">
+        <tr
+          v-for="r in receipts"
+          :key="r.id"
+        >
           <td>{{ r.receipt_id || '—' }}</td>
           <td>{{ r.payment_key }}</td>
           <td>{{ r.receipt_type }}</td>
@@ -24,7 +32,9 @@
         </tr>
       </tbody>
     </table>
-    <div v-else>{{ $t('tossAdmin.receipts.empty') }}</div>
+    <div v-else>
+      {{ $t('tossAdmin.receipts.empty') }}
+    </div>
   </div>
 </template>
 

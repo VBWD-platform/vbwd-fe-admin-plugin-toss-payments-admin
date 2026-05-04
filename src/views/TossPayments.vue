@@ -3,9 +3,19 @@
     <header>
       <h2>{{ $t('tossAdmin.payments.title') }}</h2>
     </header>
-    <div v-if="loading">{{ $t('tossAdmin.payments.loading') }}</div>
-    <div v-else-if="error" class="error">{{ error }}</div>
-    <table v-else-if="payments.length > 0" class="txtable">
+    <div v-if="loading">
+      {{ $t('tossAdmin.payments.loading') }}
+    </div>
+    <div
+      v-else-if="error"
+      class="error"
+    >
+      {{ error }}
+    </div>
+    <table
+      v-else-if="payments.length > 0"
+      class="txtable"
+    >
       <thead>
         <tr>
           <th>{{ $t('tossAdmin.payments.orderId') }}</th>
@@ -13,11 +23,14 @@
           <th>{{ $t('tossAdmin.payments.method') }}</th>
           <th>{{ $t('tossAdmin.payments.status') }}</th>
           <th>{{ $t('tossAdmin.payments.paymentKey') }}</th>
-          <th></th>
+          <th />
         </tr>
       </thead>
       <tbody>
-        <tr v-for="p in payments" :key="p.id">
+        <tr
+          v-for="p in payments"
+          :key="p.id"
+        >
           <td>{{ p.order_id }}</td>
           <td>{{ p.amount }} {{ p.currency }}</td>
           <td>{{ p.method || '—' }}</td>
@@ -37,7 +50,9 @@
         </tr>
       </tbody>
     </table>
-    <div v-else>{{ $t('tossAdmin.payments.empty') }}</div>
+    <div v-else>
+      {{ $t('tossAdmin.payments.empty') }}
+    </div>
   </div>
 </template>
 
