@@ -57,7 +57,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, storeToRefs } from 'vue';
+import { onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 import { useTossStore, type TossPayment } from '../stores/tossPayments';
 import { api } from '@/api';
 
