@@ -2,7 +2,7 @@ import type { IPlugin, IPlatformSDK } from 'vbwd-view-component';
 
 export const tossPaymentsAdminPlugin: IPlugin = {
   name: 'toss-payments-admin',
-  version: '26.6',
+  version: '26.6.1',
   description: 'Toss Payments admin — payments list, refunds, cash-receipts',
 
   install(sdk: IPlatformSDK) {
